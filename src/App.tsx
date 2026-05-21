@@ -1,7 +1,10 @@
+import Background from "./components/ui/Background";
+
 function App() {
   return (
     <>
-      <h1 className="">HOME</h1>
+      <Background />
+      <main className="w-full py-8 px-16"></main>
     </>
   );
 }
