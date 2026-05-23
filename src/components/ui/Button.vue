@@ -2,7 +2,7 @@
 
 <template>
   <button
-    class="flex gap-2 justify-center items-center text-lg font-semibold px-4 py-2 bg-white/10 backdrop-blur-md border border-white/50 rounded-full"
+    class="flex gap-2 justify-center items-center text-lg font-semibold px-4 py-2 bg-white/5 backdrop-blur-[3px] border-4 border-white/20 rounded-full"
   >
     <span> Discover </span>
     <svg
