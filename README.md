@@ -1,1 +1,1 @@
-# Projects in progress ... 🚀
+# Project is in progress ... 🚀
