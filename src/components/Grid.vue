@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute inset-0 z-0 grid-bg opacity-20"></div>
+  <div class="absolute inset-0 z-0 grid-bg opacity-5"></div>
 </template>
 
 <script setup lang="ts"></script>
