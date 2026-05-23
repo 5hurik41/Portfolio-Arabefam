@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import flower from '../../assets/flower.svg'
 import star from '../../assets/star.svg'
+import Tag from './Tag.vue'
+
+const tags = ['ui/ux', 'frontend', 'mobilededv', 'prototyping']
 </script>
 
 <template>
   <div
-    class="absolute flex flex-col items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none leading-none whitespace-nowrap"
+    class="absolute flex flex-col gap-2 items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none leading-none whitespace-nowrap"
   >
     <p class="text-3xl md:text-[3vw] font-medium">Creative Developer</p>
     <div class="text-8xl md:text-[12vw] font-extrabold">
@@ -24,5 +27,8 @@ import star from '../../assets/star.svg'
         <img :src="star" class="absolute -top-2 left-1/2 -translate-x-1/2 w-[0.4em]" /> </span
       >o
     </div>
+    <footer class="flex gap-2 justify-between w-full">
+      <Tag v-for="(tag, index) in tags" :tagname="tag" :key="index" />
+    </footer>
   </div>
 </template>
