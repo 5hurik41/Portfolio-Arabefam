@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import flower from '../assets/flower.svg'
+import flower from '../../assets/flower.svg'
 </script>
