@@ -1,11 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Grid from './components/Grid.vue'
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p class="">
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <main class="relative h-screen w-full">
+    <Grid />
+  </main>
 </template>
 
 <style scoped></style>
