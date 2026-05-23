@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { getPop } from '@/utils/animation'
 import flower from '../../assets/flower.svg'
 import star from '../../assets/star.svg'
 import Tag from './Tag.vue'
@@ -9,6 +10,7 @@ const tags = ['ui/ux', 'frontend', 'mobiledev', 'prototyping']
 <template>
   <div
     class="absolute flex flex-col gap-2 items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none leading-none whitespace-nowrap"
+    v-motion="getPop(900)"
   >
     <p class="text-3xl md:text-[3vw] font-medium">Creative Developer</p>
     <div class="text-8xl md:text-[12vw] font-extrabold">
