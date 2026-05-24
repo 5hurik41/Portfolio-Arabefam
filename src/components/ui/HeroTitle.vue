@@ -9,11 +9,11 @@ const tags = ['ui/ux', 'frontend', 'mobiledev', 'prototyping']
 
 <template>
   <div
-    class="absolute flex flex-col gap-2 items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none leading-none whitespace-nowrap"
+    class="absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-2 leading-none whitespace-nowrap select-none"
     v-motion="getPop(900)"
   >
-    <p class="text-3xl md:text-[3vw] font-medium">Creative Developer</p>
-    <div class="text-8xl md:text-[12vw] font-extrabold">
+    <h2 class="text-fluid-h2 font-medium">Creative Developer</h2>
+    <div class="text-fluid-h1 font-extrabold">
       <span class="relative inline-block">
         P
         <img
@@ -28,11 +28,11 @@ const tags = ['ui/ux', 'frontend', 'mobiledev', 'prototyping']
         ı
         <img
           :src="star"
-          class="absolute -top-2 left-1/2 -translate-x-1/2 w-[0.4em] animate-[bounce_2s_linear_infinite]"
+          class="absolute -top-2 left-1/2 w-[0.4em] -translate-x-1/2 animate-[bounce_2s_linear_infinite]"
         /> </span
       >o
     </div>
-    <footer class="flex gap-2 justify-center w-full">
+    <footer class="flex w-full flex-wrap justify-center gap-2">
       <Tag v-for="(tag, index) in tags" :tagname="tag" :key="index" />
     </footer>
   </div>

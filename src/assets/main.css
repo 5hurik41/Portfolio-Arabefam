@@ -7,6 +7,21 @@
   --color-brand-background: #f2f2f3;
   --color-brand-primary: #5a25fb;
   --color-brand-dark: #262529;
+
+  /* Tags, Signatures (ex: 12px -> 14px) */
+  --text-fluid-tag: clamp(0.75rem, 0.6989rem + 0.2273vw, 0.875rem);
+
+  /* Base & Boutons (ex: 16px -> 18px) */
+  --text-fluid-base: clamp(1rem, 0.9489rem + 0.2273vw, 1.125rem);
+
+  /* Titres H3 (ex: 23px -> 28px) */
+  --text-fluid-h3: clamp(1.44rem, 0.47vw + 1.33rem, 1.75rem);
+
+  /* Titres H2 (ex: 33px -> 50px) */
+  --text-fluid-h2: clamp(2.5rem, 2.1932rem + 1.3636vw, 3.25rem);
+
+  /* Gros Titres H1 / Landing (ex: 48px -> 80px) */
+  --text-fluid-h1: clamp(5rem, 2.75rem + 10vw, 10.5rem);
 }
 
 @layer base {

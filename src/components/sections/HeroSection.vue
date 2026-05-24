@@ -10,7 +10,7 @@ import HeroTitle from '../ui/HeroTitle.vue'
 </script>
 
 <template>
-  <section class="relative z-10 h-screen w-screen snap-start overflow-hidden">
+  <section id="home" class="relative z-10 h-screen w-screen snap-start overflow-hidden">
     <Grid />
 
     <Flower

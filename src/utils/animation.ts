@@ -57,6 +57,15 @@ export const getPop = (delayMs: number): MotionVariants<any> => ({
   visibleOnce: false,
 })
 
+export const getSlideDown = (delayMs: number) => ({
+  initial: { opacity: 0, y: -50 }, // Part d'en haut
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { delay: delayMs, duration: 600 },
+  },
+})
+
 export const scrollIntoSection = (id: string) => {
   const element = document.getElementById(id)
   if (element) {
