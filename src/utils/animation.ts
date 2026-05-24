@@ -1,30 +1,35 @@
 import { type MotionVariants } from '@vueuse/motion'
 
 export const getSlideUp = (delayMs: number): MotionVariants<any> => ({
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  enter: {
+  initial: { opacity: 0, y: 100 },
+  visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      delay: delayMs,
-      duration: 800,
-      type: 'spring',
-      stiffness: 250,
-    },
+    transition: { delay: delayMs, duration: 800 },
   },
+  leave: {
+    opacity: 0,
+    y: 100,
+    transition: { duration: 0 },
+  },
+  // @ts-ignore
+  visibleOnce: false,
 })
 
 export const getSlideLeft = (delayMs: number): MotionVariants<any> => ({
   initial: { opacity: 0, x: -100 },
-  enter: { opacity: 1, x: 0, transition: { delay: delayMs, duration: 800 } },
+  visible: { opacity: 1, x: 0, transition: { delay: delayMs, duration: 800 } },
+  leave: { opacity: 0, x: -100, transition: { duration: 300 } },
+  // @ts-ignore
+  visibleOnce: false,
 })
 
 export const getSlideRight = (delayMs: number): MotionVariants<any> => ({
   initial: { opacity: 0, x: 100 },
-  enter: { opacity: 1, x: 0, transition: { delay: delayMs, duration: 800 } },
+  visible: { opacity: 1, x: 0, transition: { delay: delayMs, duration: 800 } },
+  leave: { opacity: 0, x: 100, transition: { duration: 300 } },
+  // @ts-ignore
+  visibleOnce: false,
 })
 
 export const getPop = (delayMs: number): MotionVariants<any> => ({
@@ -32,7 +37,7 @@ export const getPop = (delayMs: number): MotionVariants<any> => ({
     opacity: 0,
     scale: 0.5,
   },
-  enter: {
+  visible: {
     opacity: 1,
     scale: 1,
     transition: {
@@ -43,6 +48,13 @@ export const getPop = (delayMs: number): MotionVariants<any> => ({
       mass: 1,
     },
   },
+  leave: {
+    opacity: 0,
+    scale: 0.5,
+    transition: { duration: 300 },
+  },
+  // @ts-ignore
+  visibleOnce: false,
 })
 
 export const scrollIntoSection = (id: string) => {

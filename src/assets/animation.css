@@ -1,0 +1,35 @@
+/* 1. On nomme la timeline de scroll sur ton conteneur principal */
+.scroll-container {
+  scroll-timeline: --pageScroll y;
+}
+
+/* 2. L'animation pour la fleur en bas à gauche (qui doit monter) */
+@keyframes flowerRise {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-150px);
+  } /* Ajuste les pixels selon tes goûts */
+}
+
+/* 3. L'animation pour la fleur en haut à droite (qui doit descendre) */
+@keyframes flowerFall {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(150px);
+  }
+}
+
+/* 4. Les classes utilitaires pour tes composants */
+.animate-flower-rise {
+  animation: flowerRise linear both;
+  animation-timeline: --pageScroll;
+}
+
+.animate-flower-fall {
+  animation: flowerFall linear both;
+  animation-timeline: --pageScroll;
+}
