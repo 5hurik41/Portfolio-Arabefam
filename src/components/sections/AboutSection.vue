@@ -78,7 +78,7 @@ import Grid from '../ui/Grid.vue'
     <footer class="absolute bottom-14 left-1/2 -translate-x-1/2" v-motion="getSlideUp(450)">
       <div class="relative">
         <Button
-          @click="scrollIntoSection('about')"
+          @click="scrollIntoSection('projects')"
           class="relative z-20"
           label="Projects"
           :icon="arrow"

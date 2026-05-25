@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import { getPop, getSlideUp } from '@/utils/animation'
+import { getPop, getSlideDown, getSlideUp, scrollIntoSection } from '@/utils/animation'
 import { ref } from 'vue'
+import arrow from '../../assets/arrow-down.svg'
 import flower from '../../assets/flower.svg'
+import star from '../../assets/star.svg'
+import Button from '../ui/Button.vue'
 import Card from '../ui/Card.vue'
 import Grid from '../ui/Grid.vue'
 
@@ -58,13 +61,26 @@ const scrollPrev = () => {
   >
     <Grid />
 
+    <header class="absolute top-14 left-1/2 -translate-x-1/2" v-motion="getSlideDown(450)">
+      <div class="relative">
+        <Button
+          @click="scrollIntoSection('home')"
+          class="text-brand-primary relative z-20 animate-[bounce_3s_infinite] transition-all duration-300 hover:-translate-y-1"
+          label="Back to home"
+        />
+      </div>
+    </header>
+
     <div class="relative z-10 flex w-full max-w-360 flex-col px-4 md:px-8">
       <div class="mb-8 flex items-center justify-between px-4" v-motion="getSlideUp(150)">
-        <h2 class="text-fluid-h2 font-bold">
-          Selected W<img
-            :src="flower"
-            class="mx-[0.02em] mt-[-0.15em] inline-block h-[0.75em] w-[0.75em] animate-[spin_15s_linear_infinite] align-middle"
-          />rk
+        <h2 class="text-fluid-h2 font-bold text-slate-900">
+          Selected
+          <span class="whitespace-nowrap"
+            >W<img
+              :src="flower"
+              class="mx-[0.02em] mt-[-0.15em] inline-block h-[0.75em] w-[0.75em] animate-[spin_15s_linear_infinite] align-middle"
+            />rk</span
+          >
         </h2>
 
         <div class="flex gap-2 md:gap-3" v-motion="getPop(300)">
@@ -117,6 +133,27 @@ const scrollPrev = () => {
         <Card v-for="(project, index) in projects" :key="index" :project="project" />
       </div>
     </div>
+
+    <div
+      class="text-fluid-base absolute right-14 bottom-6 z-10 font-bold lg:right-24 lg:bottom-12"
+      v-motion="getPop(450)"
+    >
+      Projects 02/4
+    </div>
+
+    <footer class="absolute bottom-14 left-1/2 z-10 -translate-x-1/2" v-motion="getSlideUp(450)">
+      <div class="relative">
+        <Button
+          @click="scrollIntoSection('footer')"
+          class="relative z-20"
+          label="Footer"
+          :icon="arrow"
+          icon-class="animate-bounce"
+        />
+        <img :src="flower" class="absolute top-[20%] left-[-15%] z-0 w-12.5" />
+        <img :src="star" class="absolute top-[-60%] right-[-20%] z-0 w-16.5" />
+      </div>
+    </footer>
   </section>
 </template>
 
