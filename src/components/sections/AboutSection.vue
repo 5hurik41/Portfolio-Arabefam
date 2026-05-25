@@ -91,21 +91,6 @@ import SectionNavigation from '../ui/SectionNavigation.vue'
             <span class="bg-brand-primary/50 block h-px w-8"></span>
             Let's build something memorable!
           </p>
-
-          <div class="mt-8 flex flex-wrap gap-2">
-            <span
-              class="bg-brand-primary/10 border-brand-primary/20 text-brand-primary hover:bg-brand-primary cursor-default rounded-full border px-3 py-1.5 text-xs font-bold transition-colors hover:text-white"
-              >Clean Code</span
-            >
-            <span
-              class="bg-brand-primary/10 border-brand-primary/20 text-brand-primary hover:bg-brand-primary cursor-default rounded-full border px-3 py-1.5 text-xs font-bold transition-colors hover:text-white"
-              >Sharp Design</span
-            >
-            <span
-              class="bg-brand-primary/10 border-brand-primary/20 text-brand-primary hover:bg-brand-primary cursor-default rounded-full border px-3 py-1.5 text-xs font-bold transition-colors hover:text-white"
-              >Pancakes 🥞</span
-            >
-          </div>
         </div>
       </div>
     </div>
