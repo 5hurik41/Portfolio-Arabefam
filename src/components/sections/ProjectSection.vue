@@ -159,7 +159,13 @@ const closeProject = () => {
     </div>
 
     <SectionIndicator name="Projects" current="02" total="3" />
-    <SectionNavigation target="footer" label="Contact" :icon="arrow" icon-class="animate-bounce" />
+    <SectionNavigation
+      target="footer"
+      label="Contact"
+      :icon="arrow"
+      icon-class="animate-bounce"
+      class="hidden md:block"
+    />
 
     <ProjectDialog :project="selectedProject" @close="closeProject" />
   </section>

@@ -101,6 +101,7 @@ import SectionNavigation from '../ui/SectionNavigation.vue'
       label="Projects"
       :icon="arrow"
       icon-class="animate-bounce"
+      class="hidden md:block"
     />
   </section>
 </template>
