@@ -40,7 +40,7 @@ const contactLinks = [
 <template>
   <section
     id="footer"
-    class="relative z-20 flex h-screen w-screen snap-start flex-col items-center justify-center overflow-hidden"
+    class="relative z-20 flex h-[100dvh] w-full snap-start flex-col items-center justify-center overflow-hidden"
   >
     <Grid />
 

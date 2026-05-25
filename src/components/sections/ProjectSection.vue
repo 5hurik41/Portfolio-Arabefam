@@ -84,7 +84,7 @@ const closeProject = () => {
 <template>
   <section
     id="projects"
-    class="relative z-20 flex h-screen w-screen snap-start items-center justify-center overflow-hidden"
+    class="relative z-20 flex h-[100dvh] w-full snap-start items-center justify-center overflow-hidden"
   >
     <Grid />
 
@@ -102,7 +102,7 @@ const closeProject = () => {
       <div class="mb-8 flex items-center justify-between px-4" v-motion="getSlideUp(150)">
         <h2 class="text-fluid-h2 font-bold whitespace-nowrap">Selected Work</h2>
 
-        <div class="flex gap-2 md:gap-3" v-motion="getPop(300)">
+        <div class="hidden md:flex gap-2 md:gap-3" v-motion="getPop(300)">
           <button
             @click="scrollPrev"
             class="hover:bg-brand-primary hover:border-brand-primary flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-slate-200 bg-white/80 text-slate-600 backdrop-blur-md transition-all hover:-translate-y-1 hover:text-white hover:shadow-lg active:scale-95 md:h-14 md:w-14"

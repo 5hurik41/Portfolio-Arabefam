@@ -19,7 +19,7 @@ import SectionNavigation from '../ui/SectionNavigation.vue'
 <template>
   <section
     id="about"
-    class="relative z-20 flex h-screen w-screen snap-start items-center justify-center overflow-hidden"
+    class="relative z-20 flex h-[100dvh] w-full snap-start items-center justify-center overflow-hidden"
   >
     <Flower
       class="absolute bottom-5 left-0 w-52 -translate-x-1/2 opacity-80 md:w-64 lg:w-72"
