@@ -19,7 +19,7 @@ import SectionNavigation from '../ui/SectionNavigation.vue'
 <template>
   <section
     id="about"
-    class="relative z-20 flex h-[100dvh] w-full snap-start items-center justify-center overflow-hidden"
+    class="relative z-20 flex h-screen w-screen snap-start items-center justify-center overflow-hidden"
   >
     <Flower
       class="absolute bottom-5 left-0 w-52 -translate-x-1/2 opacity-80 md:w-64 lg:w-72"
@@ -31,7 +31,7 @@ import SectionNavigation from '../ui/SectionNavigation.vue'
       v-motion="getSlideRight(300)"
     />
     <Grid />
-    <header class="absolute top-14 left-1/2 -translate-x-1/2" v-motion="getSlideDown(450)">
+    <header class="absolute top-6 md:top-14 left-1/2 -translate-x-1/2" v-motion="getSlideDown(450)">
       <div class="relative">
         <Button
           @click="scrollIntoSection('home')"
@@ -51,7 +51,7 @@ import SectionNavigation from '../ui/SectionNavigation.vue'
       </div>
 
       <div
-        class="mx-auto flex w-full max-w-xl flex-col items-start gap-8 px-4 lg:mx-0"
+        class="mx-auto flex w-full max-w-xl flex-col items-start gap-4 md:gap-8 px-4 lg:mx-0"
         v-motion="getSlideUp(450)"
       >
         <div class="flex flex-col gap-3">

@@ -19,7 +19,7 @@ withDefaults(
 </script>
 
 <template>
-  <footer class="absolute bottom-14 left-1/2 z-10 -translate-x-1/2" v-motion="getSlideUp(delay)">
+  <footer class="absolute bottom-6 md:bottom-14 left-1/2 z-10 -translate-x-1/2" v-motion="getSlideUp(delay)">
     <div class="relative">
       <Button
         @click="scrollIntoSection(target)"
