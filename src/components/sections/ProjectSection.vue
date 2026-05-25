@@ -2,20 +2,34 @@
 import { getPop, getSlideDown, getSlideUp, scrollIntoSection } from '@/utils/animation'
 import { ref } from 'vue'
 import arrow from '../../assets/arrow-down.svg'
-import flower from '../../assets/flower.svg'
 import Button from '../ui/Button.vue'
 import Card from '../ui/Card.vue'
 import Grid from '../ui/Grid.vue'
+import ProjectDialog from '../ui/ProjectDialog.vue'
 import SectionIndicator from '../ui/SectionIndicator.vue'
 import SectionNavigation from '../ui/SectionNavigation.vue'
 
-const projects = [
+import aikintanaCover from '../../assets/covers/Aikintana.png'
+import cub3dCover from '../../assets/covers/cub3d.png'
+import ftTranscendenceCover from '../../assets/covers/ft_transcendence.png'
+import inceptionCover from '../../assets/covers/inception.png'
+
+interface Project {
+  title: string
+  description: string
+  tags: string[]
+  link: string
+  cover?: string
+}
+
+const projects: Project[] = [
   {
     title: 'ft_transcendence',
     description:
       'A real-time multiplayer Monopoly-like board game platform. Features live matchmaking, dynamic chat lobbies, and automated game state synchronization.',
     tags: ['NestJS', 'Vue.js', 'WebSockets', 'PostgreSQL'],
     link: '#',
+    cover: ftTranscendenceCover,
   },
   {
     title: 'Inception',
@@ -23,13 +37,15 @@ const projects = [
       'System administration project aiming to broaden knowledge of Docker and Docker Compose by setting up an infrastructure of multiple services.',
     tags: ['Docker', 'Nginx', 'MariaDB', 'WordPress'],
     link: '#',
+    cover: inceptionCover,
   },
   {
-    title: 'Minishell',
+    title: 'Aikintana',
     description:
-      'A custom shell built from scratch in C, replicating bash functionalities including pipes, redirections, and environment variable expansions.',
-    tags: ['C', 'Bash', 'System Calls', 'Parsing'],
+      'The first AI from Madagascar that turns your emotions into unique galaxies. Awarded 3rd place at the 2025-2026 Inter-University Hackathon, this project showcases real-time sentiment analysis merged with generative cosmic art.',
+    tags: ['React', 'Three.js', 'GeminiFlashLiveAPI', 'Nest.js'],
     link: '#',
+    cover: aikintanaCover,
   },
   {
     title: 'Cub3D',
@@ -37,10 +53,12 @@ const projects = [
       'A 3D raycaster engine built in C, inspired by Wolfenstein 3D. Explores the mathematical concepts behind raycasting and basic game engine mechanics.',
     tags: ['C', 'Raycasting', 'MiniLibX', 'Maths'],
     link: '#',
+    cover: cub3dCover,
   },
 ]
 
 const carouselRef = ref<HTMLElement | null>(null)
+const selectedProject = ref<Project | null>(null)
 
 const scrollNext = () => {
   if (carouselRef.value) {
@@ -52,6 +70,14 @@ const scrollPrev = () => {
   if (carouselRef.value) {
     carouselRef.value.scrollBy({ left: -432, behavior: 'smooth' })
   }
+}
+
+const openProject = (project: Project) => {
+  selectedProject.value = project
+}
+
+const closeProject = () => {
+  selectedProject.value = null
 }
 </script>
 
@@ -74,15 +100,7 @@ const scrollPrev = () => {
 
     <div class="relative z-10 flex w-full max-w-360 flex-col px-4 md:px-8">
       <div class="mb-8 flex items-center justify-between px-4" v-motion="getSlideUp(150)">
-        <h2 class="text-fluid-h2 font-bold text-slate-900">
-          Selected
-          <span class="whitespace-nowrap"
-            >W<img
-              :src="flower"
-              class="mx-[0.02em] mt-[-0.15em] inline-block h-[0.75em] w-[0.75em] animate-[spin_15s_linear_infinite] align-middle"
-            />rk</span
-          >
-        </h2>
+        <h2 class="text-fluid-h2 font-bold whitespace-nowrap">Selected W🌸rk</h2>
 
         <div class="flex gap-2 md:gap-3" v-motion="getPop(300)">
           <button
@@ -131,12 +149,20 @@ const scrollPrev = () => {
         class="hide-scrollbar -mt-6 flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pt-6 pb-12 md:snap-x md:gap-8 lg:px-4"
         v-motion="getSlideUp(250)"
       >
-        <Card v-for="(project, index) in projects" :key="index" :project="project" />
+        <Card
+          v-for="(project, index) in projects"
+          :key="index"
+          :project="project"
+          @open="openProject"
+        />
       </div>
     </div>
 
     <SectionIndicator name="Projects" current="02" total="3" />
     <SectionNavigation target="footer" label="Contact" :icon="arrow" icon-class="animate-bounce" />
+
+    <!-- Project Modal -->
+    <ProjectDialog :project="selectedProject" @close="closeProject" />
   </section>
 </template>
 

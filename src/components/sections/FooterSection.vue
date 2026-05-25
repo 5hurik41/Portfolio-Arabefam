@@ -9,7 +9,7 @@ import SectionNavigation from '../ui/SectionNavigation.vue'
 const contactLinks = [
   {
     label: 'Email Me',
-    url: 'mailto:contact@example.com',
+    url: 'mailto:andyhrabefamantanatsoa@yahoo.com',
     colorClass: 'text-brand-primary',
     bgClass: 'bg-brand-primary/10',
     groupHoverBg: 'group-hover:bg-brand-primary',
@@ -18,7 +18,7 @@ const contactLinks = [
   },
   {
     label: 'LinkedIn',
-    url: '#',
+    url: 'https://www.linkedin.com/in/andyh-rabe',
     colorClass: 'text-[#0a66c2]',
     bgClass: 'bg-[#0a66c2]/10',
     groupHoverBg: 'group-hover:bg-[#0a66c2]',
@@ -27,7 +27,7 @@ const contactLinks = [
   },
   {
     label: 'GitHub',
-    url: '#',
+    url: 'https://github.com/5hurik41',
     colorClass: 'text-[#181717]',
     bgClass: 'bg-[#181717]/10',
     groupHoverBg: 'group-hover:bg-[#181717]',
@@ -78,6 +78,8 @@ const contactLinks = [
         v-for="(link, i) in contactLinks"
         :key="i"
         :href="link.url"
+        target="_blank"
+        rel="noopener noreferrer"
         class="group flex items-center gap-3 rounded-2xl border border-white/50 bg-white/70 px-6 py-4 shadow-sm backdrop-blur-xl transition-all duration-300 hover:-translate-y-2"
         :class="link.shadowHover"
       >
