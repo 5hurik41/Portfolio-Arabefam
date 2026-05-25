@@ -8,7 +8,7 @@ import SectionNavigation from '../ui/SectionNavigation.vue'
 </script>
 
 <template>
-  <section id="home" class="relative z-10 h-screen w-screen snap-start overflow-hidden">
+  <section id="home" class="relative z-10 h-[100dvh] w-full snap-start overflow-hidden">
     <Grid />
 
     <Flower

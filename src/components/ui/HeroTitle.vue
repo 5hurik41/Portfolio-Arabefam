@@ -9,7 +9,7 @@ const tags = ['ui/ux', 'frontend', 'mobiledev', 'prototyping']
 
 <template>
   <div
-    class="absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-2 leading-none whitespace-nowrap select-none"
+    class="absolute top-1/2 left-1/2 flex w-full max-w-[95vw] -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-2 leading-none select-none px-4"
     v-motion="getPop(900)"
   >
     <h2 class="text-fluid-h2 font-medium">Creative Developer</h2>
