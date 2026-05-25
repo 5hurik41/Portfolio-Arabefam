@@ -2,6 +2,7 @@
 import AboutSeection from '@/components/sections/AboutSection.vue'
 import HeroSection from '@/components/sections/HeroSection.vue'
 import ProjectSection from '@/components/sections/ProjectSection.vue'
+import FooterSection from '@/components/sections/FooterSection.vue'
 </script>
 <template>
   <main class="relative h-screen w-full snap-y snap-mandatory overflow-x-hidden overflow-y-scroll">
@@ -10,5 +11,7 @@ import ProjectSection from '@/components/sections/ProjectSection.vue'
     <AboutSeection />
 
     <ProjectSection />
+
+    <FooterSection />
   </main>
 </template>

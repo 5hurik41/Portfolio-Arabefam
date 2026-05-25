@@ -3,10 +3,11 @@ import { getPop, getSlideDown, getSlideUp, scrollIntoSection } from '@/utils/ani
 import { ref } from 'vue'
 import arrow from '../../assets/arrow-down.svg'
 import flower from '../../assets/flower.svg'
-import star from '../../assets/star.svg'
 import Button from '../ui/Button.vue'
 import Card from '../ui/Card.vue'
 import Grid from '../ui/Grid.vue'
+import SectionIndicator from '../ui/SectionIndicator.vue'
+import SectionNavigation from '../ui/SectionNavigation.vue'
 
 const projects = [
   {
@@ -134,26 +135,8 @@ const scrollPrev = () => {
       </div>
     </div>
 
-    <div
-      class="text-fluid-base absolute right-14 bottom-6 z-10 font-bold lg:right-24 lg:bottom-12"
-      v-motion="getPop(450)"
-    >
-      Projects 02/4
-    </div>
-
-    <footer class="absolute bottom-14 left-1/2 z-10 -translate-x-1/2" v-motion="getSlideUp(450)">
-      <div class="relative">
-        <Button
-          @click="scrollIntoSection('footer')"
-          class="relative z-20"
-          label="Footer"
-          :icon="arrow"
-          icon-class="animate-bounce"
-        />
-        <img :src="flower" class="absolute top-[20%] left-[-15%] z-0 w-12.5" />
-        <img :src="star" class="absolute top-[-60%] right-[-20%] z-0 w-16.5" />
-      </div>
-    </footer>
+    <SectionIndicator name="Projects" current="02" total="3" />
+    <SectionNavigation target="footer" label="Contact" :icon="arrow" icon-class="animate-bounce" />
   </section>
 </template>
 

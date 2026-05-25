@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import { getSlideLeft, getSlideRight, getSlideUp, scrollIntoSection } from '@/utils/animation'
+import { getSlideLeft, getSlideRight } from '@/utils/animation'
 import arrow from '../../assets/arrow-down.svg'
-import flower from '../../assets/flower.svg'
-import star from '../../assets/star.svg'
-import Button from '../ui/Button.vue'
 import Flower from '../ui/Flower.vue'
 import Grid from '../ui/Grid.vue'
 import HeroTitle from '../ui/HeroTitle.vue'
+import SectionNavigation from '../ui/SectionNavigation.vue'
 </script>
 
 <template>
@@ -25,18 +23,11 @@ import HeroTitle from '../ui/HeroTitle.vue'
 
     <HeroTitle />
 
-    <footer class="absolute bottom-14 left-1/2 -translate-x-1/2" v-motion="getSlideUp(450)">
-      <div class="relative">
-        <Button
-          @click="scrollIntoSection('about')"
-          class="relative z-10"
-          label="Discover"
-          :icon="arrow"
-          icon-class="animate-bounce"
-        />
-        <img :src="flower" class="z- absolute top-[20%] left-[-15%] w-12.5" />
-        <img :src="star" class="absolute top-[-60%] right-[-20%] z-0 w-16.5" />
-      </div>
-    </footer>
+    <SectionNavigation 
+      target="about" 
+      label="Discover" 
+      :icon="arrow" 
+      icon-class="animate-bounce" 
+    />
   </section>
 </template>

@@ -19,7 +19,7 @@ defineProps<{
     :href="project.link"
     target="_blank"
     rel="noopener noreferrer"
-    class="group hover:border-brand-primary/20 relative flex h-70 w-[85vw] shrink-0 snap-center flex-col justify-between rounded-3xl border border-white/50 bg-white/70 p-6 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:-rotate-1 hover:shadow-[0_4px_0_0_#5A25FB,0_16px_20px_0_rgba(90,31,257,0.12)] active:scale-[0.98] md:h-80 md:w-100 lg:w-112.5"
+    class="group hover:border-brand-primary/20 relative flex h-70 w-[85vw] shrink-0 snap-center flex-col justify-between rounded-3xl border border-white/50 bg-white/70 p-6 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:-rotate-1 hover:shadow-[0_4px_0_0_#5A25FB,0_16px_20px_0_#5A25FB1F] active:scale-[0.98] md:h-80 md:w-100 lg:w-112.5"
   >
     <div>
       <div class="mb-4 flex flex-col items-start gap-3">
