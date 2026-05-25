@@ -51,21 +51,62 @@ import SectionNavigation from '../ui/SectionNavigation.vue'
       </div>
 
       <div
-        class="mx-auto flex w-full max-w-xl flex-col items-start gap-2 px-4 lg:mx-0"
+        class="mx-auto flex w-full max-w-xl flex-col items-start gap-8 px-4 lg:mx-0"
         v-motion="getSlideUp(450)"
       >
-        <h2
-          class="from-brand-dark to-brand-primary text-fluid-h2 bg-linear-to-r bg-clip-text font-bold text-transparent"
+        <div class="flex flex-col gap-3">
+          <h2
+            class="from-brand-dark to-brand-primary text-fluid-h2 bg-gradient-to-r bg-clip-text font-extrabold tracking-tight text-transparent"
+          >
+            Hello World !
+          </h2>
+          <div class="bg-brand-primary/40 h-1.5 w-16 rounded-full"></div>
+        </div>
+
+        <div
+          class="relative rounded-3xl border border-white/50 bg-white/60 p-6 shadow-[0_20px_40px_#5a25fb15] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:bg-white/80 hover:shadow-[0_25px_50px_#5a25fb26] md:p-8"
         >
-          Hello World !
-        </h2>
-        <p class="text-fluid-base text-left leading-relaxed font-medium text-slate-600">
-          I'm <span class="text-brand-primary font-bold">Andyh Rabefamantanatsoa</span>, a developer
-          from Madagascar who loves bridging the gap between clean code and sharp design. I spend my
-          time crafting smooth, modular web and mobile experiences. When I'm not tweaking a layout,
-          I’m probably making pancakes or hanging out with dogs and cats. Let's build something
-          memorable together!
-        </p>
+          <svg
+            class="text-brand-primary/30 absolute -top-5 -left-5 h-10 w-10 rotate-12 transition-transform duration-500 hover:rotate-0"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"
+            />
+          </svg>
+
+          <p class="text-fluid-base text-left leading-relaxed font-medium text-slate-700">
+            I'm <span class="text-brand-primary font-black">Andyh Rabefamantanatsoa</span>, a
+            developer from Madagascar who loves bridging the gap between clean code and sharp
+            design.
+          </p>
+
+          <p class="text-fluid-base mt-4 text-left leading-relaxed font-medium text-slate-600/90">
+            I spend my time crafting smooth, modular web and mobile experiences. When I'm not
+            tweaking a layout, I’m probably making pancakes or hanging out with dogs and cats.
+          </p>
+
+          <p class="text-fluid-base mt-6 flex items-center gap-2 font-bold text-slate-900">
+            <span class="bg-brand-primary/50 block h-px w-8"></span>
+            Let's build something memorable!
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-2">
+            <span
+              class="bg-brand-primary/10 border-brand-primary/20 text-brand-primary hover:bg-brand-primary cursor-default rounded-full border px-3 py-1.5 text-xs font-bold transition-colors hover:text-white"
+              >Clean Code</span
+            >
+            <span
+              class="bg-brand-primary/10 border-brand-primary/20 text-brand-primary hover:bg-brand-primary cursor-default rounded-full border px-3 py-1.5 text-xs font-bold transition-colors hover:text-white"
+              >Sharp Design</span
+            >
+            <span
+              class="bg-brand-primary/10 border-brand-primary/20 text-brand-primary hover:bg-brand-primary cursor-default rounded-full border px-3 py-1.5 text-xs font-bold transition-colors hover:text-white"
+              >Pancakes 🥞</span
+            >
+          </div>
+        </div>
       </div>
     </div>
 

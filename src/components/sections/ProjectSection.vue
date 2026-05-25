@@ -100,7 +100,7 @@ const closeProject = () => {
 
     <div class="relative z-10 flex w-full max-w-360 flex-col px-4 md:px-8">
       <div class="mb-8 flex items-center justify-between px-4" v-motion="getSlideUp(150)">
-        <h2 class="text-fluid-h2 font-bold whitespace-nowrap">Selected W🌸rk</h2>
+        <h2 class="text-fluid-h2 font-bold whitespace-nowrap">Selected Work</h2>
 
         <div class="flex gap-2 md:gap-3" v-motion="getPop(300)">
           <button
@@ -161,7 +161,6 @@ const closeProject = () => {
     <SectionIndicator name="Projects" current="02" total="3" />
     <SectionNavigation target="footer" label="Contact" :icon="arrow" icon-class="animate-bounce" />
 
-    <!-- Project Modal -->
     <ProjectDialog :project="selectedProject" @close="closeProject" />
   </section>
 </template>

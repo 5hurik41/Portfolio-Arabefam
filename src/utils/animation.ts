@@ -58,7 +58,7 @@ export const getPop = (delayMs: number): MotionVariants<any> => ({
 })
 
 export const getSlideDown = (delayMs: number) => ({
-  initial: { opacity: 0, y: -50 }, // Part d'en haut
+  initial: { opacity: 0, y: -50 },
   visible: {
     opacity: 1,
     y: 0,

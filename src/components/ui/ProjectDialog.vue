@@ -30,7 +30,7 @@ defineEmits<{
         v-motion="getPop(0)"
         class="relative flex w-full max-w-4xl flex-col overflow-hidden rounded-3xl border border-white/50 bg-white/80 backdrop-blur-2xl shadow-2xl max-h-[90vh]"
       >
-        <!-- Close Button -->
+
         <button
           @click="$emit('close')"
           class="absolute top-4 right-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/50 text-slate-800 backdrop-blur-md transition-all hover:scale-110 hover:bg-white"
@@ -38,9 +38,9 @@ defineEmits<{
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
         </button>
 
-        <!-- Content Area (Scrollable) -->
+
         <div class="overflow-y-auto hide-scrollbar flex-1">
-          <!-- Cover Image (Blog Header Style) -->
+
           <div class="w-full h-64 sm:h-80 md:h-96 relative bg-slate-100 shrink-0">
             <img 
               v-if="project.cover" 
@@ -51,7 +51,7 @@ defineEmits<{
             <div class="absolute inset-0 bg-gradient-to-t from-white/90 to-transparent"></div>
           </div>
 
-          <!-- Project Details -->
+
           <div class="px-6 md:px-10 pb-10 -mt-16 relative z-10">
             <h2 class="text-3xl md:text-5xl font-black tracking-tight text-slate-900 mb-6">{{ project.title }}</h2>
             

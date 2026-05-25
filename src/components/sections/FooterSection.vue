@@ -49,7 +49,6 @@ const contactLinks = [
       v-motion="getPop(150)"
     />
 
-    <!-- Giant Impact Typography -->
     <div
       class="relative z-10 flex flex-col items-center justify-center px-4 text-center"
       v-motion="getSlideUp(250)"
@@ -69,7 +68,6 @@ const contactLinks = [
       </p>
     </div>
 
-    <!-- Contact Cards -->
     <div
       class="relative z-10 mt-12 flex flex-wrap items-center justify-center gap-4 px-4"
       v-motion="getPop(450)"
@@ -111,5 +109,13 @@ const contactLinks = [
       icon-class="animate-bounce rotate-180"
       :delay="550"
     />
+
+    <div 
+      class="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-3 text-[10px] sm:text-xs font-bold tracking-[0.2em] text-slate-500 uppercase transition-colors hover:text-slate-700 z-50"
+    >
+      <span>&copy; 2026</span>
+      <span class="h-1 w-1 rounded-full bg-brand-primary shadow-[0_0_8px_rgba(90,31,251,0.8)]"></span>
+      <span>5hurik41</span>
+    </div>
   </section>
 </template>

@@ -23,18 +23,18 @@ defineEmits<{
     @click="$emit('open', project)"
     class="text-left group hover:border-brand-primary/30 relative flex h-70 w-[85vw] shrink-0 snap-center flex-col overflow-hidden rounded-3xl border border-white/50 bg-white/70 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:-rotate-1 hover:shadow-[0_4px_0_0_#5A25FB,0_16px_20px_0_#5A25FB1F] active:scale-[0.98] md:h-80 md:w-100 lg:w-112.5"
   >
-    <!-- Cover Image Preview -->
+
     <div class="relative h-32 w-full shrink-0 overflow-hidden bg-slate-100 md:h-40">
       <img 
         v-if="project.cover" 
         :src="project.cover" 
         class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" 
       />
-      <!-- Subtle gradient overlay that fades on hover -->
+
       <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent transition-opacity duration-500 group-hover:opacity-0"></div>
     </div>
 
-    <!-- Text Content Area -->
+
     <div class="flex flex-1 flex-col p-6">
       <div class="mb-2 flex flex-col items-start">
         <h3
@@ -49,14 +49,14 @@ defineEmits<{
       </p>
     </div>
 
-    <!-- Hover Read More Pill -->
+
     <div
       class="bg-brand-primary pointer-events-none absolute top-4 right-4 hidden translate-y-2 rounded-xl px-3 py-1.5 text-[11px] font-bold text-white opacity-0 shadow-md transition-all delay-75 duration-300 group-hover:translate-y-0 group-hover:opacity-100 md:block"
     >
       Read More
     </div>
 
-    <!-- Mobile Persistent Arrow -->
+
     <div
       class="text-brand-primary group-hover:bg-brand-primary absolute right-6 bottom-6 flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 transition-all duration-300 group-hover:text-white md:hidden"
     >
