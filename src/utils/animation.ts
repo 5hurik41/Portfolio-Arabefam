@@ -1,7 +1,7 @@
 import { type MotionVariants } from '@vueuse/motion'
 
 export const getSlideUp = (delayMs: number): MotionVariants<any> => ({
-  initial: { opacity: 0, y: 100 },
+  initial: { opacity: 0, y: 25 },
   visible: {
     opacity: 1,
     y: 0,
@@ -9,7 +9,7 @@ export const getSlideUp = (delayMs: number): MotionVariants<any> => ({
   },
   leave: {
     opacity: 0,
-    y: 100,
+    y: 25,
     transition: { duration: 0 },
   },
   // @ts-ignore

@@ -19,7 +19,10 @@ withDefaults(
 </script>
 
 <template>
-  <footer class="absolute bottom-6 md:bottom-14 left-1/2 z-10 -translate-x-1/2" v-motion="getSlideUp(delay)">
+  <footer
+    class="text-fluid-tag absolute bottom-6 left-1/2 z-10 -translate-x-1/2 md:bottom-14"
+    v-motion="getSlideUp(delay)"
+  >
     <div class="relative">
       <Button
         @click="scrollIntoSection(target)"
@@ -30,9 +33,12 @@ withDefaults(
       />
       <img
         :src="flower"
-        class="absolute bottom-[-15%] left-[-20%] z-0 w-12.5 animate-[spin_10s_linear_infinite]"
+        class="absolute bottom-[-5%] left-[-2%] z-0 w-5 animate-[spin_10s_linear_infinite] lg:bottom-[-25%] lg:left-[-15%] lg:w-12"
       />
-      <img :src="star" class="absolute top-[-25%] right-[-15%] z-0 w-12 animate-pulse" />
+      <img
+        :src="star"
+        class="absolute top-[-5%] right-[-5%] z-0 w-6 animate-pulse lg:top-[-30%] lg:right-[-15%] lg:w-12"
+      />
     </div>
   </footer>
 </template>

@@ -113,7 +113,6 @@ const contactLinks = [
       :icon="arrowUp"
       icon-class="animate-bounce rotate-180"
       :delay="550"
-      class="hidden md:block"
     />
   </section>
 </template>
