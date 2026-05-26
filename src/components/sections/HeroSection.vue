@@ -8,7 +8,7 @@ import SectionNavigation from '../ui/SectionNavigation.vue'
 </script>
 
 <template>
-  <section id="home" class="relative z-10 h-[100dvh] w-full snap-start overflow-hidden">
+  <section id="home" class="relative z-10 h-dvh w-full snap-start overflow-hidden">
     <Grid />
 
     <Flower
@@ -23,11 +23,6 @@ import SectionNavigation from '../ui/SectionNavigation.vue'
 
     <HeroTitle />
 
-    <SectionNavigation 
-      target="about" 
-      label="Discover" 
-      :icon="arrow" 
-      icon-class="animate-bounce" 
-    />
+    <SectionNavigation target="about" label="Discover" :icon="arrow" icon-class="animate-bounce" />
   </section>
 </template>

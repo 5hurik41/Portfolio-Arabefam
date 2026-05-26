@@ -31,7 +31,7 @@ import SectionNavigation from '../ui/SectionNavigation.vue'
       v-motion="getSlideRight(300)"
     />
     <Grid />
-    <header class="absolute top-6 md:top-14 left-1/2 -translate-x-1/2" v-motion="getSlideDown(450)">
+    <header class="absolute top-6 left-1/2 -translate-x-1/2 md:top-14" v-motion="getSlideDown(450)">
       <div class="relative">
         <Button
           @click="scrollIntoSection('home')"
@@ -51,12 +51,12 @@ import SectionNavigation from '../ui/SectionNavigation.vue'
       </div>
 
       <div
-        class="mx-auto flex w-full max-w-xl flex-col items-start gap-4 md:gap-8 px-4 lg:mx-0"
+        class="mx-auto flex w-full max-w-xl flex-col items-start gap-4 px-4 md:gap-8 lg:mx-0"
         v-motion="getSlideUp(450)"
       >
         <div class="flex flex-col gap-3">
           <h2
-            class="from-brand-dark to-brand-primary text-fluid-h2 bg-gradient-to-r bg-clip-text font-extrabold tracking-tight text-transparent"
+            class="from-brand-dark to-brand-primary text-fluid-h2 bg-linear-to-r bg-clip-text font-extrabold tracking-tight text-transparent"
           >
             Hello World !
           </h2>

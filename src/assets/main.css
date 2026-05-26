@@ -8,11 +8,11 @@
   --color-brand-primary: #5a25fb;
   --color-brand-dark: #262529;
 
-  /* Tags, Signatures (ex: 12px -> 14px) */
-  --text-fluid-tag: clamp(0.75rem, 0.6989rem + 0.2273vw, 0.875rem);
+  /* Tags, Signatures (ex: 9px -> 14px) */
+  --text-fluid-tag: clamp(0.5625rem, 0.4347rem + 0.5682vw, 0.875rem);
 
-  /* Base & Boutons (ex: 16px -> 18px) */
-  --text-fluid-base: clamp(1rem, 0.9489rem + 0.2273vw, 1.125rem);
+  /* Base & Boutons (ex: 12px -> 18px) */
+  --text-fluid-base: clamp(0.75rem, 0.5966rem + 0.6818vw, 1.125rem);
 
   /* Titres H3 (ex: 23px -> 28px) */
   --text-fluid-h3: clamp(1.44rem, 0.47vw + 1.33rem, 1.75rem);
@@ -34,7 +34,7 @@
     background-color: var(--color-brand-background);
     font-family: var(--font-sans);
     color: var(--color-brand-dark);
-    maring: 0;
+    margin: 0;
     min-height: 100vh;
     overflow-x: hidden;
   }
