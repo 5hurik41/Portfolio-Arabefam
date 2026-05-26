@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getPop, getSlideUp } from '@/utils/animation'
+import { getPop, getSlideLeft, getSlideRight, getSlideUp } from '@/utils/animation'
 import arrowUp from '../../assets/arrow-down.svg'
 import Flower from '../ui/Flower.vue'
 import Grid from '../ui/Grid.vue'
@@ -40,13 +40,18 @@ const contactLinks = [
 <template>
   <section
     id="footer"
-    class="relative z-20 flex h-[100dvh] w-full snap-start flex-col items-center justify-center overflow-hidden"
+    class="relative z-20 flex h-dvh w-full snap-start flex-col items-center justify-center overflow-hidden"
   >
     <Grid />
 
     <Flower
-      class="absolute top-10 right-0 w-52 translate-x-1/2 opacity-80 md:w-64 lg:w-72"
-      v-motion="getPop(150)"
+      class="absolute top-10 right-0 w-52 translate-x-1/2 opacity-80 md:w-64"
+      v-motion="getSlideRight(150)"
+    />
+
+    <Flower
+      class="absolute bottom-10 left-0 w-24 -translate-x-1/2 opacity-80 md:w-48"
+      v-motion="getSlideLeft(300)"
     />
 
     <div
@@ -78,7 +83,7 @@ const contactLinks = [
         :href="link.url"
         target="_blank"
         rel="noopener noreferrer"
-        class="group flex items-center gap-3 rounded-2xl border border-white/50 bg-white/70 px-6 py-4 shadow-sm backdrop-blur-xl transition-all duration-300 hover:-translate-y-2"
+        class="group text-fluid-base! flex items-center gap-3 rounded-2xl border border-white/50 bg-white/70 px-4 py-2 shadow-sm backdrop-blur-xl transition-all duration-300 hover:-translate-y-2"
         :class="link.shadowHover"
       >
         <div
@@ -108,7 +113,6 @@ const contactLinks = [
       :icon="arrowUp"
       icon-class="animate-bounce rotate-180"
       :delay="550"
-      class="hidden md:block"
     />
   </section>
 </template>
